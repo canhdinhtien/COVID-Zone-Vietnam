@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1943cd6adffb9b1724f6a42461571509 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 50px; left: 50px; width: 120px; height: 110px; 
+    border:2px solid grey; z-index:9999; font-size:14px; background-color:white;
+    ">&nbsp; Zone Legend <br>
+    &nbsp; <i class="fa fa-circle fa-1x" style="color:green"></i> Zone 0 <br>
+    &nbsp; <i class="fa fa-circle fa-1x" style="color:orange"></i> Zone 1 <br>
+    &nbsp; <i class="fa fa-circle fa-1x" style="color:red"></i> Zone 2 <br>
+    &nbsp; <i class="fa fa-circle fa-1x" style="color:purple"></i> Zone 3
+</div>
+    
+            <div class="folium-map" id="map_1943cd6adffb9b1724f6a42461571509" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1943cd6adffb9b1724f6a42461571509 = L.map(
+                "map_1943cd6adffb9b1724f6a42461571509",
+                {
+                    center: [15.775, 107.304],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5092b3055ea5a46771420f915d7a5ba9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_5092b3055ea5a46771420f915d7a5ba9.addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+            var circle_marker_abc72d1bcd114a601a2a91e931aeb797 = L.circleMarker(
+                [10.8231, 106.6297],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_9d2eda0afb1b7b2f52534459115173e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc8d8b7aea3dadf84e5bef7f386aed0c = $(`<div id="html_bc8d8b7aea3dadf84e5bef7f386aed0c" style="width: 100.0%; height: 100.0%;">TP. Hồ Chí Minh<br>Zone: 2<br>Infected Cases: 629.018<br>Deaths: 19.985<br>New Cases: 3</div>`)[0];
+                popup_9d2eda0afb1b7b2f52534459115173e6.setContent(html_bc8d8b7aea3dadf84e5bef7f386aed0c);
+            
+        
+
+        circle_marker_abc72d1bcd114a601a2a91e931aeb797.bindPopup(popup_9d2eda0afb1b7b2f52534459115173e6)
+        ;
+
+        
+    
+    
+            var circle_marker_e092c4173ce7bc372dd52a44ee649cb8 = L.circleMarker(
+                [20.8449, 106.6881],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_17d131d293e355e924ff4d6ce17a1800 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9a55e700cb419ecf7d4306815e486b4d = $(`<div id="html_9a55e700cb419ecf7d4306815e486b4d" style="width: 100.0%; height: 100.0%;">Hải Phòng<br>Zone: 2<br>Infected Cases: 537.527<br>Deaths: 138.0<br>New Cases: 5</div>`)[0];
+                popup_17d131d293e355e924ff4d6ce17a1800.setContent(html_9a55e700cb419ecf7d4306815e486b4d);
+            
+        
+
+        circle_marker_e092c4173ce7bc372dd52a44ee649cb8.bindPopup(popup_17d131d293e355e924ff4d6ce17a1800)
+        ;
+
+        
+    
+    
+            var circle_marker_13b8078803021ce8487793c9e26d4d69 = L.circleMarker(
+                [18.8126, 105.283],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_ca4eca9e45a9bdef0e1360a374891d8f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_357108bd5d57ce2d6a52815cb15164ab = $(`<div id="html_357108bd5d57ce2d6a52815cb15164ab" style="width: 100.0%; height: 100.0%;">Nghệ An<br>Zone: 2<br>Infected Cases: 502.049<br>Deaths: 145.0<br>New Cases: 11</div>`)[0];
+                popup_ca4eca9e45a9bdef0e1360a374891d8f.setContent(html_357108bd5d57ce2d6a52815cb15164ab);
+            
+        
+
+        circle_marker_13b8078803021ce8487793c9e26d4d69.bindPopup(popup_ca4eca9e45a9bdef0e1360a374891d8f)
+        ;
+
+        
+    
+    
+            var circle_marker_c7a2849f9161f7e471622eb4c4c61650 = L.circleMarker(
+                [21.2733, 106.1946],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_1ae278bcf706d239477e475514205c28 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3c1b9befaee3f1f576e9be7845e26a2c = $(`<div id="html_3c1b9befaee3f1f576e9be7845e26a2c" style="width: 100.0%; height: 100.0%;">Bắc Giang<br>Zone: 2<br>Infected Cases: 391.44<br>Deaths: 92.0<br>New Cases: 0</div>`)[0];
+                popup_1ae278bcf706d239477e475514205c28.setContent(html_3c1b9befaee3f1f576e9be7845e26a2c);
+            
+        
+
+        circle_marker_c7a2849f9161f7e471622eb4c4c61650.bindPopup(popup_1ae278bcf706d239477e475514205c28)
+        ;
+
+        
+    
+    
+            var circle_marker_582ad0a4fa8f098c1a558234f0820bdb = L.circleMarker(
+                [21.3016, 105.5963],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_3600f93339cf6460e35d56a1107bd067 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a3aaaa43dd1ae7af9ce3a3ed303aa85c = $(`<div id="html_a3aaaa43dd1ae7af9ce3a3ed303aa85c" style="width: 100.0%; height: 100.0%;">Vĩnh Phúc<br>Zone: 2<br>Infected Cases: 375.686<br>Deaths: 19.0<br>New Cases: 0</div>`)[0];
+                popup_3600f93339cf6460e35d56a1107bd067.setContent(html_a3aaaa43dd1ae7af9ce3a3ed303aa85c);
+            
+        
+
+        circle_marker_582ad0a4fa8f098c1a558234f0820bdb.bindPopup(popup_3600f93339cf6460e35d56a1107bd067)
+        ;
+
+        
+    
+    
+            var circle_marker_b9d9848bbbb636f4efe6bc41f40c225d = L.circleMarker(
+                [20.9408, 106.333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_45c6abbd484525d0bc58845b6f9d15a0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f37ae1dcdf8bebabeaf62d01b1a15b4d = $(`<div id="html_f37ae1dcdf8bebabeaf62d01b1a15b4d" style="width: 100.0%; height: 100.0%;">Hải Dương<br>Zone: 2<br>Infected Cases: 372.391<br>Deaths: 117.0<br>New Cases: 5</div>`)[0];
+                popup_45c6abbd484525d0bc58845b6f9d15a0.setContent(html_f37ae1dcdf8bebabeaf62d01b1a15b4d);
+            
+        
+
+        circle_marker_b9d9848bbbb636f4efe6bc41f40c225d.bindPopup(popup_45c6abbd484525d0bc58845b6f9d15a0)
+        ;
+
+        
+    
+    
+            var circle_marker_4596ccae12d8e08041d578b21b9ab08c = L.circleMarker(
+                [20.9511, 107.08],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_20ad7ffcbcf6cd05c1a9c1f9608bdb83 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9e65cbcd1d244fe66ad4be7aa99e5b6 = $(`<div id="html_b9e65cbcd1d244fe66ad4be7aa99e5b6" style="width: 100.0%; height: 100.0%;">Quảng Ninh<br>Zone: 2<br>Infected Cases: 356.404<br>Deaths: 150.0<br>New Cases: 7</div>`)[0];
+                popup_20ad7ffcbcf6cd05c1a9c1f9608bdb83.setContent(html_b9e65cbcd1d244fe66ad4be7aa99e5b6);
+            
+        
+
+        circle_marker_4596ccae12d8e08041d578b21b9ab08c.bindPopup(popup_20ad7ffcbcf6cd05c1a9c1f9608bdb83)
+        ;
+
+        
+    
+    
+            var circle_marker_8a449206f3785220a6498397e92ae15b = L.circleMarker(
+                [21.1876, 106.0763],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_a8e560caf0fc70b011fc68a0116c634a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd2451d6d76c706694edd17798e84ae2 = $(`<div id="html_bd2451d6d76c706694edd17798e84ae2" style="width: 100.0%; height: 100.0%;">Bắc Ninh<br>Zone: 2<br>Infected Cases: 353.869<br>Deaths: 136.0<br>New Cases: 0</div>`)[0];
+                popup_a8e560caf0fc70b011fc68a0116c634a.setContent(html_bd2451d6d76c706694edd17798e84ae2);
+            
+        
+
+        circle_marker_8a449206f3785220a6498397e92ae15b.bindPopup(popup_a8e560caf0fc70b011fc68a0116c634a)
+        ;
+
+        
+    
+    
+            var circle_marker_6dcccbeb9880f1895e057c3170492f61 = L.circleMarker(
+                [21.5671, 105.8252],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_e5319d07218f56ec786c8902bb3fabfe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1a6e444391dc5c49b13e2ba0639b7472 = $(`<div id="html_1a6e444391dc5c49b13e2ba0639b7472" style="width: 100.0%; height: 100.0%;">Thái Nguyên<br>Zone: 2<br>Infected Cases: 347.519<br>Deaths: 112.0<br>New Cases: 1</div>`)[0];
+                popup_e5319d07218f56ec786c8902bb3fabfe.setContent(html_1a6e444391dc5c49b13e2ba0639b7472);
+            
+        
+
+        circle_marker_6dcccbeb9880f1895e057c3170492f61.bindPopup(popup_e5319d07218f56ec786c8902bb3fabfe)
+        ;
+
+        
+    
+    
+            var circle_marker_9b4bf35df26210fc08c6a48347318e55 = L.circleMarker(
+                [21.2684, 105.2017],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_0cab19f141fac31a4425a98ac366ca1d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e05bbdc6555cd6c3ee004c593b437f5d = $(`<div id="html_e05bbdc6555cd6c3ee004c593b437f5d" style="width: 100.0%; height: 100.0%;">Phú Thọ<br>Zone: 2<br>Infected Cases: 331.52<br>Deaths: 97.0<br>New Cases: 4</div>`)[0];
+                popup_0cab19f141fac31a4425a98ac366ca1d.setContent(html_e05bbdc6555cd6c3ee004c593b437f5d);
+            
+        
+
+        circle_marker_9b4bf35df26210fc08c6a48347318e55.bindPopup(popup_0cab19f141fac31a4425a98ac366ca1d)
+        ;
+
+        
+    
+    
+            var circle_marker_89d0842d0327ee7dd685073f993b15f3 = L.circleMarker(
+                [11.3254, 106.477],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_32bebb8a3cf05572970ab1a1e91c8361 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_24b7eb9837088237858d369d5fd61b77 = $(`<div id="html_24b7eb9837088237858d369d5fd61b77" style="width: 100.0%; height: 100.0%;">Bình Dương<br>Zone: 2<br>Infected Cases: 325.667<br>Deaths: 3.519<br>New Cases: 4</div>`)[0];
+                popup_32bebb8a3cf05572970ab1a1e91c8361.setContent(html_24b7eb9837088237858d369d5fd61b77);
+            
+        
+
+        circle_marker_89d0842d0327ee7dd685073f993b15f3.bindPopup(popup_32bebb8a3cf05572970ab1a1e91c8361)
+        ;
+
+        
+    
+    
+            var circle_marker_9b8454ee9b521b7838d5adc973e9350d = L.circleMarker(
+                [20.4388, 106.1621],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_2c0a08e162262383bba69df1233b6fbe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c7cdf06e5352cfa8969346d085d9f55e = $(`<div id="html_c7cdf06e5352cfa8969346d085d9f55e" style="width: 100.0%; height: 100.0%;">Nam Định<br>Zone: 2<br>Infected Cases: 301.101<br>Deaths: 150.0<br>New Cases: 1</div>`)[0];
+                popup_2c0a08e162262383bba69df1233b6fbe.setContent(html_c7cdf06e5352cfa8969346d085d9f55e);
+            
+        
+
+        circle_marker_9b8454ee9b521b7838d5adc973e9350d.bindPopup(popup_2c0a08e162262383bba69df1233b6fbe)
+        ;
+
+        
+    
+    
+            var circle_marker_00b4164de8c13e2a8cfac2a07f40a0a2 = L.circleMarker(
+                [20.4463, 106.3364],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_8dd7fbbb545e0e572bf32aa469deb355 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fece0b6f4cc13f8ff3f85a4af6940c69 = $(`<div id="html_fece0b6f4cc13f8ff3f85a4af6940c69" style="width: 100.0%; height: 100.0%;">Thái Bình<br>Zone: 2<br>Infected Cases: 296.789<br>Deaths: 23.0<br>New Cases: 0</div>`)[0];
+                popup_8dd7fbbb545e0e572bf32aa469deb355.setContent(html_fece0b6f4cc13f8ff3f85a4af6940c69);
+            
+        
+
+        circle_marker_00b4164de8c13e2a8cfac2a07f40a0a2.bindPopup(popup_8dd7fbbb545e0e572bf32aa469deb355)
+        ;
+
+        
+    
+    
+            var circle_marker_0cc09df51c85490999e1cb1ab43d60bc = L.circleMarker(
+                [20.8526, 106.0161],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_96d5cc2d0aee6784938e5c8ec059bc89 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_626b0b906b06772c025731243a5f8339 = $(`<div id="html_626b0b906b06772c025731243a5f8339" style="width: 100.0%; height: 100.0%;">Hưng Yên<br>Zone: 1<br>Infected Cases: 244.028<br>Deaths: 5.0<br>New Cases: 2</div>`)[0];
+                popup_96d5cc2d0aee6784938e5c8ec059bc89.setContent(html_626b0b906b06772c025731243a5f8339);
+            
+        
+
+        circle_marker_0cc09df51c85490999e1cb1ab43d60bc.bindPopup(popup_96d5cc2d0aee6784938e5c8ec059bc89)
+        ;
+
+        
+    
+    
+            var circle_marker_2f159b3bd553d8f0a462dce194bb9b17 = L.circleMarker(
+                [20.6861, 105.3131],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_3c11fb7ef50b8f792fe64365ce09f38a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5533c85fbd1747d7b83a44068ec14ad1 = $(`<div id="html_5533c85fbd1747d7b83a44068ec14ad1" style="width: 100.0%; height: 100.0%;">Hoà Bình<br>Zone: 1<br>Infected Cases: 239.941<br>Deaths: 102.0<br>New Cases: 1</div>`)[0];
+                popup_3c11fb7ef50b8f792fe64365ce09f38a.setContent(html_5533c85fbd1747d7b83a44068ec14ad1);
+            
+        
+
+        circle_marker_2f159b3bd553d8f0a462dce194bb9b17.bindPopup(popup_3c11fb7ef50b8f792fe64365ce09f38a)
+        ;
+
+        
+    
+    
+            var circle_marker_d3d3e1e45e20e299933596af30c60f2a = L.circleMarker(
+                [22.3381, 104.1487],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_fb6f899d494280aa4dd2c37fa88da825 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_19c9ad11f361342cd67713bb5afcba80 = $(`<div id="html_19c9ad11f361342cd67713bb5afcba80" style="width: 100.0%; height: 100.0%;">Lào Cai<br>Zone: 1<br>Infected Cases: 188.846<br>Deaths: 38.0<br>New Cases: 0</div>`)[0];
+                popup_fb6f899d494280aa4dd2c37fa88da825.setContent(html_19c9ad11f361342cd67713bb5afcba80);
+            
+        
+
+        circle_marker_d3d3e1e45e20e299933596af30c60f2a.bindPopup(popup_fb6f899d494280aa4dd2c37fa88da825)
+        ;
+
+        
+    
+    
+            var circle_marker_2ab5cad90459a945e379ce7b6f6e1781 = L.circleMarker(
+                [19.8067, 105.7852],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_d238dba872a7c74e7666970b9746b99f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_03d8ae20bb3c69188b785776ecefc52c = $(`<div id="html_03d8ae20bb3c69188b785776ecefc52c" style="width: 100.0%; height: 100.0%;">Thanh Hóa<br>Zone: 1<br>Infected Cases: 178.595<br>Deaths: 109.0<br>New Cases: 2</div>`)[0];
+                popup_d238dba872a7c74e7666970b9746b99f.setContent(html_03d8ae20bb3c69188b785776ecefc52c);
+            
+        
+
+        circle_marker_2ab5cad90459a945e379ce7b6f6e1781.bindPopup(popup_d238dba872a7c74e7666970b9746b99f)
+        ;
+
+        
+    
+    
+            var circle_marker_d47d58157199945765f47bdcd0bab1d3 = L.circleMarker(
+                [12.71, 108.2378],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_35aae800a65f85a068bbae374df2fa2e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_acc5a6c6a27353d0a351a77d54580889 = $(`<div id="html_acc5a6c6a27353d0a351a77d54580889" style="width: 100.0%; height: 100.0%;">Đắk Lắk<br>Zone: 1<br>Infected Cases: 172.439<br>Deaths: 201.0<br>New Cases: 0</div>`)[0];
+                popup_35aae800a65f85a068bbae374df2fa2e.setContent(html_acc5a6c6a27353d0a351a77d54580889);
+            
+        
+
+        circle_marker_d47d58157199945765f47bdcd0bab1d3.bindPopup(popup_35aae800a65f85a068bbae374df2fa2e)
+        ;
+
+        
+    
+    
+            var circle_marker_f2218af5646e8c4a16bc4dd595a96f05 = L.circleMarker(
+                [21.847, 106.7571],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_ddc9b915fe6f607faf0f498b23c08f5a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_04a808bdd7202f660072ff7b28b009cb = $(`<div id="html_04a808bdd7202f660072ff7b28b009cb" style="width: 100.0%; height: 100.0%;">Lạng Sơn<br>Zone: 1<br>Infected Cases: 160.752<br>Deaths: 85.0<br>New Cases: 0</div>`)[0];
+                popup_ddc9b915fe6f607faf0f498b23c08f5a.setContent(html_04a808bdd7202f660072ff7b28b009cb);
+            
+        
+
+        circle_marker_f2218af5646e8c4a16bc4dd595a96f05.bindPopup(popup_ddc9b915fe6f607faf0f498b23c08f5a)
+        ;
+
+        
+    
+    
+            var circle_marker_431cb883193c2c0d1b1a059943b13e1e = L.circleMarker(
+                [21.7167, 104.8985],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_2e275947de65926562966831b9d593bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_506afbe758adf79ca19725de51ed0a2f = $(`<div id="html_506afbe758adf79ca19725de51ed0a2f" style="width: 100.0%; height: 100.0%;">Yên Bái<br>Zone: 1<br>Infected Cases: 158.046<br>Deaths: 13.0<br>New Cases: 6</div>`)[0];
+                popup_2e275947de65926562966831b9d593bd.setContent(html_506afbe758adf79ca19725de51ed0a2f);
+            
+        
+
+        circle_marker_431cb883193c2c0d1b1a059943b13e1e.bindPopup(popup_2e275947de65926562966831b9d593bd)
+        ;
+
+        
+    
+    
+            var circle_marker_32e7fbea7899ec9071a494ed2e2aa076 = L.circleMarker(
+                [21.328, 103.9106],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_4d2335191431fee5f9e066a38abffbe8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ae2ee713f60c2b7abf764ea79ad47a81 = $(`<div id="html_ae2ee713f60c2b7abf764ea79ad47a81" style="width: 100.0%; height: 100.0%;">Sơn La<br>Zone: 1<br>Infected Cases: 153.602<br>Deaths: 0.0<br>New Cases: 8</div>`)[0];
+                popup_4d2335191431fee5f9e066a38abffbe8.setContent(html_ae2ee713f60c2b7abf764ea79ad47a81);
+            
+        
+
+        circle_marker_32e7fbea7899ec9071a494ed2e2aa076.bindPopup(popup_4d2335191431fee5f9e066a38abffbe8)
+        ;
+
+        
+    
+    
+            var circle_marker_16fe98d67b001ba43c4c10f4b7bf41e1 = L.circleMarker(
+                [9.152, 105.196],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_a410d93a0eaaffb58906ee3b00039230 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_18e6455440738421580c4833a672a641 = $(`<div id="html_18e6455440738421580c4833a672a641" style="width: 100.0%; height: 100.0%;">Cà Mau<br>Zone: 1<br>Infected Cases: 147.734<br>Deaths: 357.0<br>New Cases: 2</div>`)[0];
+                popup_a410d93a0eaaffb58906ee3b00039230.setContent(html_18e6455440738421580c4833a672a641);
+            
+        
+
+        circle_marker_16fe98d67b001ba43c4c10f4b7bf41e1.bindPopup(popup_a410d93a0eaaffb58906ee3b00039230)
+        ;
+
+        
+    
+    
+            var circle_marker_b0d99b63cd3f670706dcf85f9ade9261 = L.circleMarker(
+                [22.1797, 105.2131],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_5e7f52a64019a8024ddf48668e2bd5a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d272cd6fd7aeef9a1c429ecec27ffa96 = $(`<div id="html_d272cd6fd7aeef9a1c429ecec27ffa96" style="width: 100.0%; height: 100.0%;">Tuyên Quang<br>Zone: 1<br>Infected Cases: 147.582<br>Deaths: 14.0<br>New Cases: 0</div>`)[0];
+                popup_5e7f52a64019a8024ddf48668e2bd5a7.setContent(html_d272cd6fd7aeef9a1c429ecec27ffa96);
+            
+        
+
+        circle_marker_b0d99b63cd3f670706dcf85f9ade9261.bindPopup(popup_5e7f52a64019a8024ddf48668e2bd5a7)
+        ;
+
+        
+    
+    
+            var circle_marker_49103ead7130d639a7e4c067a0016bc5 = L.circleMarker(
+                [11.3355, 106.1055],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_47730e88f58f800747f0f0d0c98c2e39 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2b5fcec234b6f74026f719efda7211ca = $(`<div id="html_2b5fcec234b6f74026f719efda7211ca" style="width: 100.0%; height: 100.0%;">Tây Ninh<br>Zone: 0<br>Infected Cases: 140.444<br>Deaths: 944.0<br>New Cases: 0</div>`)[0];
+                popup_47730e88f58f800747f0f0d0c98c2e39.setContent(html_2b5fcec234b6f74026f719efda7211ca);
+            
+        
+
+        circle_marker_49103ead7130d639a7e4c067a0016bc5.bindPopup(popup_47730e88f58f800747f0f0d0c98c2e39)
+        ;
+
+        
+    
+    
+            var circle_marker_bdaa33e76e471eaa5b29a29c43836e95 = L.circleMarker(
+                [14.1665, 108.9027],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_2e59c9ee23ca32b381ba6b77d0c50681 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b6226aacd95d951ae387cbc1e5c516a = $(`<div id="html_5b6226aacd95d951ae387cbc1e5c516a" style="width: 100.0%; height: 100.0%;">Bình Định<br>Zone: 1<br>Infected Cases: 139.89<br>Deaths: 281.0<br>New Cases: 6</div>`)[0];
+                popup_2e59c9ee23ca32b381ba6b77d0c50681.setContent(html_5b6226aacd95d951ae387cbc1e5c516a);
+            
+        
+
+        circle_marker_bdaa33e76e471eaa5b29a29c43836e95.bindPopup(popup_2e59c9ee23ca32b381ba6b77d0c50681)
+        ;
+
+        
+    
+    
+            var circle_marker_e72bba2bc33c3b41fd74287e1d51bad7 = L.circleMarker(
+                [17.61, 106.3487],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_cd283873d0c0e08cbe00a752d4604a56 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b2f6f83067714e3c8ff9dcab6c43f477 = $(`<div id="html_b2f6f83067714e3c8ff9dcab6c43f477" style="width: 100.0%; height: 100.0%;">Quảng Bình<br>Zone: 1<br>Infected Cases: 129.648<br>Deaths: 74.0<br>New Cases: 13</div>`)[0];
+                popup_cd283873d0c0e08cbe00a752d4604a56.setContent(html_b2f6f83067714e3c8ff9dcab6c43f477);
+            
+        
+
+        circle_marker_e72bba2bc33c3b41fd74287e1d51bad7.bindPopup(popup_cd283873d0c0e08cbe00a752d4604a56)
+        ;
+
+        
+    
+    
+            var circle_marker_6f4ed1aedfcb521a81cd38be68c5932f = L.circleMarker(
+                [22.7671, 104.968],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_e6184c75e78654bcdfb64765f6c2afb3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8bdfc115aa2bc4f10296fe86c4f9456b = $(`<div id="html_8bdfc115aa2bc4f10296fe86c4f9456b" style="width: 100.0%; height: 100.0%;">Hà Giang<br>Zone: 1<br>Infected Cases: 122.61<br>Deaths: 80.0<br>New Cases: 0</div>`)[0];
+                popup_e6184c75e78654bcdfb64765f6c2afb3.setContent(html_8bdfc115aa2bc4f10296fe86c4f9456b);
+            
+        
+
+        circle_marker_6f4ed1aedfcb521a81cd38be68c5932f.bindPopup(popup_e6184c75e78654bcdfb64765f6c2afb3)
+        ;
+
+        
+    
+    
+            var circle_marker_95231f35e11499d81954a2ca2cd6b3eb = L.circleMarker(
+                [12.2388, 109.1967],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_2f9accafd7800ccada1c0375222f85cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e7b0187f8dad4c46a3219ae1152947b4 = $(`<div id="html_e7b0187f8dad4c46a3219ae1152947b4" style="width: 100.0%; height: 100.0%;">Khánh Hòa<br>Zone: 1<br>Infected Cases: 122.036<br>Deaths: 364.0<br>New Cases: 4</div>`)[0];
+                popup_2f9accafd7800ccada1c0375222f85cb.setContent(html_e7b0187f8dad4c46a3219ae1152947b4);
+            
+        
+
+        circle_marker_95231f35e11499d81954a2ca2cd6b3eb.bindPopup(popup_2f9accafd7800ccada1c0375222f85cb)
+        ;
+
+        
+    
+    
+            var circle_marker_6bfac35a455936ee2d8487abc15e63d5 = L.circleMarker(
+                [11.7512, 106.7235],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_c7d7b2cdad47c64ed24ae9fce1a4ca1f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a70387df668f84030047c171665c138 = $(`<div id="html_5a70387df668f84030047c171665c138" style="width: 100.0%; height: 100.0%;">Bình Phước<br>Zone: 1<br>Infected Cases: 120.003<br>Deaths: 224.0<br>New Cases: 1</div>`)[0];
+                popup_c7d7b2cdad47c64ed24ae9fce1a4ca1f.setContent(html_5a70387df668f84030047c171665c138);
+            
+        
+
+        circle_marker_6bfac35a455936ee2d8487abc15e63d5.bindPopup(popup_c7d7b2cdad47c64ed24ae9fce1a4ca1f)
+        ;
+
+        
+    
+    
+            var circle_marker_7989d09365f02f989fe8f067d0dd9886 = L.circleMarker(
+                [10.5417, 107.2429],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_997896eb4c730728cdef22ad07cb8a0a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bdebb662581e96c1d7bfd95e2adfc00b = $(`<div id="html_bdebb662581e96c1d7bfd95e2adfc00b" style="width: 100.0%; height: 100.0%;">Bà Rịa - Vũng Tàu<br>Zone: 0<br>Infected Cases: 110.822<br>Deaths: 497.0<br>New Cases: 2</div>`)[0];
+                popup_997896eb4c730728cdef22ad07cb8a0a.setContent(html_bdebb662581e96c1d7bfd95e2adfc00b);
+            
+        
+
+        circle_marker_7989d09365f02f989fe8f067d0dd9886.bindPopup(popup_997896eb4c730728cdef22ad07cb8a0a)
+        ;
+
+        
+    
+    
+            var circle_marker_ebbde5d8596dd492030314df158ae245 = L.circleMarker(
+                [16.0471, 108.2068],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_12f9bf1fe9ad8010ade919e895d8a881 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e5faa78e38380db0a2e4851704a94d50 = $(`<div id="html_e5faa78e38380db0a2e4851704a94d50" style="width: 100.0%; height: 100.0%;">Đà Nẵng<br>Zone: 1<br>Infected Cases: 108.712<br>Deaths: 338.0<br>New Cases: 0</div>`)[0];
+                popup_12f9bf1fe9ad8010ade919e895d8a881.setContent(html_e5faa78e38380db0a2e4851704a94d50);
+            
+        
+
+        circle_marker_ebbde5d8596dd492030314df158ae245.bindPopup(popup_12f9bf1fe9ad8010ade919e895d8a881)
+        ;
+
+        
+    
+    
+            var circle_marker_c990d1edbcb6632b4dd1f87e0715322c = L.circleMarker(
+                [11.015, 107.491],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_5de4071e89ec44debb472756f4aeb698 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_829956c0e8a4721a47371bc78fee702a = $(`<div id="html_829956c0e8a4721a47371bc78fee702a" style="width: 100.0%; height: 100.0%;">Đồng Nai<br>Zone: 1<br>Infected Cases: 107.518<br>Deaths: 1.903<br>New Cases: 0</div>`)[0];
+                popup_5de4071e89ec44debb472756f4aeb698.setContent(html_829956c0e8a4721a47371bc78fee702a);
+            
+        
+
+        circle_marker_c990d1edbcb6632b4dd1f87e0715322c.bindPopup(popup_5de4071e89ec44debb472756f4aeb698)
+        ;
+
+        
+    
+    
+            var circle_marker_833fb0b15f7c13c4e8fc123bc8584396 = L.circleMarker(
+                [20.2534, 105.9744],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_518acc8fe73e029d8d6b5d1e8337bfad = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e732dbe90f7cfa959cc7d3c58aa20f0c = $(`<div id="html_e732dbe90f7cfa959cc7d3c58aa20f0c" style="width: 100.0%; height: 100.0%;">Ninh Bình<br>Zone: 1<br>Infected Cases: 104.8<br>Deaths: 93.0<br>New Cases: 0</div>`)[0];
+                popup_518acc8fe73e029d8d6b5d1e8337bfad.setContent(html_e732dbe90f7cfa959cc7d3c58aa20f0c);
+            
+        
+
+        circle_marker_833fb0b15f7c13c4e8fc123bc8584396.bindPopup(popup_518acc8fe73e029d8d6b5d1e8337bfad)
+        ;
+
+        
+    
+    
+            var circle_marker_1b46e655262ec3c63c33bf9d4492fad8 = L.circleMarker(
+                [10.2392, 105.9575],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_be80da91109c972dca91f94109524ded = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ebaa3bca980203c8a07a1b0d139481a1 = $(`<div id="html_ebaa3bca980203c8a07a1b0d139481a1" style="width: 100.0%; height: 100.0%;">Vĩnh Long<br>Zone: 0<br>Infected Cases: 103.505<br>Deaths: 829.0<br>New Cases: 0</div>`)[0];
+                popup_be80da91109c972dca91f94109524ded.setContent(html_ebaa3bca980203c8a07a1b0d139481a1);
+            
+        
+
+        circle_marker_1b46e655262ec3c63c33bf9d4492fad8.bindPopup(popup_be80da91109c972dca91f94109524ded)
+        ;
+
+        
+    
+    
+            var circle_marker_d3b544379c114e62234705e34a18676b = L.circleMarker(
+                [10.2411, 106.3754],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_485f3dfff55f4d7c090607716d7e3e68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ef5ece46155097bb7582e70def5cdf5a = $(`<div id="html_ef5ece46155097bb7582e70def5cdf5a" style="width: 100.0%; height: 100.0%;">Bến Tre<br>Zone: 0<br>Infected Cases: 99.799<br>Deaths: 490.0<br>New Cases: 0</div>`)[0];
+                popup_485f3dfff55f4d7c090607716d7e3e68.setContent(html_ef5ece46155097bb7582e70def5cdf5a);
+            
+        
+
+        circle_marker_d3b544379c114e62234705e34a18676b.bindPopup(popup_485f3dfff55f4d7c090607716d7e3e68)
+        ;
+
+        
+    
+    
+            var circle_marker_5e2980ae758cb693dc33ea0773381558 = L.circleMarker(
+                [22.6657, 106.257],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_46a0c902e53d04987dcde5d77484d8e7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_70fc20abb4ee26310c71237a6ea5f301 = $(`<div id="html_70fc20abb4ee26310c71237a6ea5f301" style="width: 100.0%; height: 100.0%;">Cao Bằng<br>Zone: 1<br>Infected Cases: 99.051<br>Deaths: 59.0<br>New Cases: 3</div>`)[0];
+                popup_46a0c902e53d04987dcde5d77484d8e7.setContent(html_70fc20abb4ee26310c71237a6ea5f301);
+            
+        
+
+        circle_marker_5e2980ae758cb693dc33ea0773381558.bindPopup(popup_46a0c902e53d04987dcde5d77484d8e7)
+        ;
+
+        
+    
+    
+            var circle_marker_993dacc7716a22a5cb057149223b6135 = L.circleMarker(
+                [11.5753, 108.1429],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_94be4c795c89036a543e25b62fcf9631 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0b455f479d2732dfaed7dd77834600b = $(`<div id="html_a0b455f479d2732dfaed7dd77834600b" style="width: 100.0%; height: 100.0%;">Lâm Đồng<br>Zone: 1<br>Infected Cases: 98.238<br>Deaths: 141.0<br>New Cases: 0</div>`)[0];
+                popup_94be4c795c89036a543e25b62fcf9631.setContent(html_a0b455f479d2732dfaed7dd77834600b);
+            
+        
+
+        circle_marker_993dacc7716a22a5cb057149223b6135.bindPopup(popup_94be4c795c89036a543e25b62fcf9631)
+        ;
+
+        
+    
+    
+            var circle_marker_90f76b6aee1b396ba1fdd89368079887 = L.circleMarker(
+                [20.5832, 106.0218],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_9a3d3fe1adce2f755a7825a6b233b8c7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_085106b1d4ae3d7b589a387253d341ff = $(`<div id="html_085106b1d4ae3d7b589a387253d341ff" style="width: 100.0%; height: 100.0%;">Hà Nam<br>Zone: 1<br>Infected Cases: 91.467<br>Deaths: 65.0<br>New Cases: 3</div>`)[0];
+                popup_9a3d3fe1adce2f755a7825a6b233b8c7.setContent(html_085106b1d4ae3d7b589a387253d341ff);
+            
+        
+
+        circle_marker_90f76b6aee1b396ba1fdd89368079887.bindPopup(popup_9a3d3fe1adce2f755a7825a6b233b8c7)
+        ;
+
+        
+    
+    
+            var circle_marker_b29192015a514a1841437c5098e08646 = L.circleMarker(
+                [21.386, 103.023],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_728535f8a5ee877e68bcc83f891053ac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fecbb8c60935682843769697c1768561 = $(`<div id="html_fecbb8c60935682843769697c1768561" style="width: 100.0%; height: 100.0%;">Điện Biên<br>Zone: 3<br>Infected Cases: 90.757<br>Deaths: 23.0<br>New Cases: 26</div>`)[0];
+                popup_728535f8a5ee877e68bcc83f891053ac.setContent(html_fecbb8c60935682843769697c1768561);
+            
+        
+
+        circle_marker_b29192015a514a1841437c5098e08646.bindPopup(popup_728535f8a5ee877e68bcc83f891053ac)
+        ;
+
+        
+    
+    
+            var circle_marker_ea1e73ef3e09b191dcd02bb433e645a0 = L.circleMarker(
+                [16.7422, 107.1855],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_6328a324b560f15943417d610267db19 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1fa6dc45fa474255b75dd45a700d1e6 = $(`<div id="html_e1fa6dc45fa474255b75dd45a700d1e6" style="width: 100.0%; height: 100.0%;">Quảng Trị<br>Zone: 1<br>Infected Cases: 86.293<br>Deaths: 38.0<br>New Cases: 3</div>`)[0];
+                popup_6328a324b560f15943417d610267db19.setContent(html_e1fa6dc45fa474255b75dd45a700d1e6);
+            
+        
+
+        circle_marker_ea1e73ef3e09b191dcd02bb433e645a0.bindPopup(popup_6328a324b560f15943417d610267db19)
+        ;
+
+        
+    
+    
+            var circle_marker_485d1a83edfa95bd7a6b1a0e8d1f2ff5 = L.circleMarker(
+                [22.1474, 105.8348],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_45ca5f1d1bd1b93406865f71b31de579 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b64ad26c199930dbe436cacbb9d5711 = $(`<div id="html_4b64ad26c199930dbe436cacbb9d5711" style="width: 100.0%; height: 100.0%;">Bắc Kạn<br>Zone: 1<br>Infected Cases: 77.048<br>Deaths: 19.0<br>New Cases: 2</div>`)[0];
+                popup_45ca5f1d1bd1b93406865f71b31de579.setContent(html_4b64ad26c199930dbe436cacbb9d5711);
+            
+        
+
+        circle_marker_485d1a83edfa95bd7a6b1a0e8d1f2ff5.bindPopup(popup_45ca5f1d1bd1b93406865f71b31de579)
+        ;
+
+        
+    
+    
+            var circle_marker_ee652057f41024a4064d02fa6ebb3382 = L.circleMarker(
+                [10.0452, 105.7469],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_55869e7ef927f2c26ff044d4252e8d16 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dac9ee31c324f7271356721366732f7e = $(`<div id="html_dac9ee31c324f7271356721366732f7e" style="width: 100.0%; height: 100.0%;">Cần Thơ<br>Zone: 0<br>Infected Cases: 76.925<br>Deaths: 958.0<br>New Cases: 0</div>`)[0];
+                popup_55869e7ef927f2c26ff044d4252e8d16.setContent(html_dac9ee31c324f7271356721366732f7e);
+            
+        
+
+        circle_marker_ee652057f41024a4064d02fa6ebb3382.bindPopup(popup_55869e7ef927f2c26ff044d4252e8d16)
+        ;
+
+        
+    
+    
+            var circle_marker_cff35baf4236d0935fece1761ea5ba75 = L.circleMarker(
+                [22.3964, 103.4559],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_c95e11e92d5034a9e43a90dacebc4803 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f51393a96e652f8d056aa923b223ba8b = $(`<div id="html_f51393a96e652f8d056aa923b223ba8b" style="width: 100.0%; height: 100.0%;">Lai Châu<br>Zone: 1<br>Infected Cases: 75.519<br>Deaths: 0.0<br>New Cases: 1</div>`)[0];
+                popup_c95e11e92d5034a9e43a90dacebc4803.setContent(html_f51393a96e652f8d056aa923b223ba8b);
+            
+        
+
+        circle_marker_cff35baf4236d0935fece1761ea5ba75.bindPopup(popup_c95e11e92d5034a9e43a90dacebc4803)
+        ;
+
+        
+    
+    
+            var circle_marker_a5cfb40ef8a4f9b7ef8e267fadc4fc1e = L.circleMarker(
+                [9.9354, 106.3458],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_ec0019064e12118f8b705a899e326a20 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b49db75bae593088bbb4eb309113b8a8 = $(`<div id="html_b49db75bae593088bbb4eb309113b8a8" style="width: 100.0%; height: 100.0%;">Trà Vinh<br>Zone: 1<br>Infected Cases: 75.174<br>Deaths: 115.0<br>New Cases: 0</div>`)[0];
+                popup_ec0019064e12118f8b705a899e326a20.setContent(html_b49db75bae593088bbb4eb309113b8a8);
+            
+        
+
+        circle_marker_a5cfb40ef8a4f9b7ef8e267fadc4fc1e.bindPopup(popup_ec0019064e12118f8b705a899e326a20)
+        ;
+
+        
+    
+    
+            var circle_marker_0cfa47ec8a129a083c2cbec41a0e5bdd = L.circleMarker(
+                [12.2599, 107.734],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_0d320648ba17c16a7d8b81cc51e44ee9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_29e703f91707bb6e82e24af0f7a13c6d = $(`<div id="html_29e703f91707bb6e82e24af0f7a13c6d" style="width: 100.0%; height: 100.0%;">Đắk Nông<br>Zone: 1<br>Infected Cases: 73.427<br>Deaths: 47.0<br>New Cases: 0</div>`)[0];
+                popup_0d320648ba17c16a7d8b81cc51e44ee9.setContent(html_29e703f91707bb6e82e24af0f7a13c6d);
+            
+        
+
+        circle_marker_0cfa47ec8a129a083c2cbec41a0e5bdd.bindPopup(popup_0d320648ba17c16a7d8b81cc51e44ee9)
+        ;
+
+        
+    
+    
+            var circle_marker_25902a867de5958d0da1585664c1e7c4 = L.circleMarker(
+                [13.807, 108.1094],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_182c37ca9dfda60df97721ab14c8da34 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e8f32f1e860fd3e7ce98f127b50b832e = $(`<div id="html_e8f32f1e860fd3e7ce98f127b50b832e" style="width: 100.0%; height: 100.0%;">Gia Lai<br>Zone: 1<br>Infected Cases: 70.961<br>Deaths: 116.0<br>New Cases: 0</div>`)[0];
+                popup_182c37ca9dfda60df97721ab14c8da34.setContent(html_e8f32f1e860fd3e7ce98f127b50b832e);
+            
+        
+
+        circle_marker_25902a867de5958d0da1585664c1e7c4.bindPopup(popup_182c37ca9dfda60df97721ab14c8da34)
+        ;
+
+        
+    
+    
+            var circle_marker_e055f926eb72a4e3dcd3f8b5dd76d833 = L.circleMarker(
+                [18.3535, 105.888],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_24f2ea0acf493da1f3f0cedd9d44bb7d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_700faa5dfae2de6f8476a811dadfd2ce = $(`<div id="html_700faa5dfae2de6f8476a811dadfd2ce" style="width: 100.0%; height: 100.0%;">Hà Tĩnh<br>Zone: 1<br>Infected Cases: 55.279<br>Deaths: 50.0<br>New Cases: 0</div>`)[0];
+                popup_24f2ea0acf493da1f3f0cedd9d44bb7d.setContent(html_700faa5dfae2de6f8476a811dadfd2ce);
+            
+        
+
+        circle_marker_e055f926eb72a4e3dcd3f8b5dd76d833.bindPopup(popup_24f2ea0acf493da1f3f0cedd9d44bb7d)
+        ;
+
+        
+    
+    
+            var circle_marker_96365c8660862501d17278e37ed9f368 = L.circleMarker(
+                [11.0904, 108.0721],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_c69ccb4e73ed26843f751bd56687be94 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d9b7282b8db63aa9f254f57a11b03d28 = $(`<div id="html_d9b7282b8db63aa9f254f57a11b03d28" style="width: 100.0%; height: 100.0%;">Bình Thuận<br>Zone: 0<br>Infected Cases: 54.3<br>Deaths: 482.0<br>New Cases: 0</div>`)[0];
+                popup_c69ccb4e73ed26843f751bd56687be94.setContent(html_d9b7282b8db63aa9f254f57a11b03d28);
+            
+        
+
+        circle_marker_96365c8660862501d17278e37ed9f368.bindPopup(popup_c69ccb4e73ed26843f751bd56687be94)
+        ;
+
+        
+    
+    
+            var circle_marker_0e8902eba54530395cbdbeb0a240ff14 = L.circleMarker(
+                [10.592, 105.6789],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_7e4eb9ededdd78f980c79a7387c12704 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f95ae7f7e844a8b232b77ddf886130d8 = $(`<div id="html_f95ae7f7e844a8b232b77ddf886130d8" style="width: 100.0%; height: 100.0%;">Đồng Tháp<br>Zone: 1<br>Infected Cases: 51.614<br>Deaths: 1.007<br>New Cases: 6</div>`)[0];
+                popup_7e4eb9ededdd78f980c79a7387c12704.setContent(html_f95ae7f7e844a8b232b77ddf886130d8);
+            
+        
+
+        circle_marker_0e8902eba54530395cbdbeb0a240ff14.bindPopup(popup_7e4eb9ededdd78f980c79a7387c12704)
+        ;
+
+        
+    
+    
+            var circle_marker_8b845be8b7a3ec1363aed6f1ca7b40bf = L.circleMarker(
+                [15.0755, 108.7076],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_d7ac71d1ceb217fd547ec79300342e4e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c4584c82cc19219751f47492e8429b54 = $(`<div id="html_c4584c82cc19219751f47492e8429b54" style="width: 100.0%; height: 100.0%;">Quảng Ngãi<br>Zone: 1<br>Infected Cases: 50.513<br>Deaths: 127.0<br>New Cases: 0</div>`)[0];
+                popup_d7ac71d1ceb217fd547ec79300342e4e.setContent(html_c4584c82cc19219751f47492e8429b54);
+            
+        
+
+        circle_marker_8b845be8b7a3ec1363aed6f1ca7b40bf.bindPopup(popup_d7ac71d1ceb217fd547ec79300342e4e)
+        ;
+
+        
+    
+    
+            var circle_marker_f2386fbe9da2880814a735f2a8c7b18f = L.circleMarker(
+                [10.5431, 106.4113],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_6ae6c6fbe76989340fa3be2a50594f18 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_86ca257853ca1f51256a36ca18a766ea = $(`<div id="html_86ca257853ca1f51256a36ca18a766ea" style="width: 100.0%; height: 100.0%;">Long An<br>Zone: 1<br>Infected Cases: 50.297<br>Deaths: 1.088<br>New Cases: 0</div>`)[0];
+                popup_6ae6c6fbe76989340fa3be2a50594f18.setContent(html_86ca257853ca1f51256a36ca18a766ea);
+            
+        
+
+        circle_marker_f2386fbe9da2880814a735f2a8c7b18f.bindPopup(popup_6ae6c6fbe76989340fa3be2a50594f18)
+        ;
+
+        
+    
+    
+            var circle_marker_d13d44dce47f25050ef36b2b663d5cfa = L.circleMarker(
+                [15.5731, 108.474],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_372f2e10e29d831ba629d96b7bafb480 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a6e4641365be424857e4fdfb7ecc95d3 = $(`<div id="html_a6e4641365be424857e4fdfb7ecc95d3" style="width: 100.0%; height: 100.0%;">Quảng Nam<br>Zone: 1<br>Infected Cases: 49.556<br>Deaths: 150.0<br>New Cases: 0</div>`)[0];
+                popup_372f2e10e29d831ba629d96b7bafb480.setContent(html_a6e4641365be424857e4fdfb7ecc95d3);
+            
+        
+
+        circle_marker_d13d44dce47f25050ef36b2b663d5cfa.bindPopup(popup_372f2e10e29d831ba629d96b7bafb480)
+        ;
+
+        
+    
+    
+            var circle_marker_9de130031e9d06cbe61978ac3c2f37e4 = L.circleMarker(
+                [16.4637, 107.5909],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_df858de2834c6616c395eb21182315da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b6fe590751cd0ac2e154b24129a32c35 = $(`<div id="html_b6fe590751cd0ac2e154b24129a32c35" style="width: 100.0%; height: 100.0%;">Thừa Thiên Huế<br>Zone: 1<br>Infected Cases: 48.186<br>Deaths: 173.0<br>New Cases: 6</div>`)[0];
+                popup_df858de2834c6616c395eb21182315da.setContent(html_b6fe590751cd0ac2e154b24129a32c35);
+            
+        
+
+        circle_marker_9de130031e9d06cbe61978ac3c2f37e4.bindPopup(popup_df858de2834c6616c395eb21182315da)
+        ;
+
+        
+    
+    
+            var circle_marker_b10a656a2af3476b564b2da2e4dfbeaa = L.circleMarker(
+                [9.2879, 105.7249],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_6dc900f8844640857bb3c60c86b4c0e9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a809a3b30406d86610dd6cb86ae1740 = $(`<div id="html_7a809a3b30406d86610dd6cb86ae1740" style="width: 100.0%; height: 100.0%;">Bạc Liêu<br>Zone: 0<br>Infected Cases: 46.949<br>Deaths: 470.0<br>New Cases: 0</div>`)[0];
+                popup_6dc900f8844640857bb3c60c86b4c0e9.setContent(html_7a809a3b30406d86610dd6cb86ae1740);
+            
+        
+
+        circle_marker_b10a656a2af3476b564b2da2e4dfbeaa.bindPopup(popup_6dc900f8844640857bb3c60c86b4c0e9)
+        ;
+
+        
+    
+    
+            var circle_marker_29bc0d862c8f8b4debedfc2732f96271 = L.circleMarker(
+                [13.0955, 109.2927],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_51e92d8ea36f6ee6b1ae61ee9016ceca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_327d68a9e09f0511db6fb30626aacc5e = $(`<div id="html_327d68a9e09f0511db6fb30626aacc5e" style="width: 100.0%; height: 100.0%;">Phú Yên<br>Zone: 1<br>Infected Cases: 44.481<br>Deaths: 137.0<br>New Cases: 0</div>`)[0];
+                popup_51e92d8ea36f6ee6b1ae61ee9016ceca.setContent(html_327d68a9e09f0511db6fb30626aacc5e);
+            
+        
+
+        circle_marker_29bc0d862c8f8b4debedfc2732f96271.bindPopup(popup_51e92d8ea36f6ee6b1ae61ee9016ceca)
+        ;
+
+        
+    
+    
+            var circle_marker_7dabb4d29081cf59c9d296d0ee03ad95 = L.circleMarker(
+                [10.0151, 105.0809],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_7ec87b902f8c82055f987aff93f5e98b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_67a84850322efd49a6179d6c4362d514 = $(`<div id="html_67a84850322efd49a6179d6c4362d514" style="width: 100.0%; height: 100.0%;">Kiên Giang<br>Zone: 1<br>Infected Cases: 43.659<br>Deaths: 1.027<br>New Cases: 0</div>`)[0];
+                popup_7ec87b902f8c82055f987aff93f5e98b.setContent(html_67a84850322efd49a6179d6c4362d514);
+            
+        
+
+        circle_marker_7dabb4d29081cf59c9d296d0ee03ad95.bindPopup(popup_7ec87b902f8c82055f987aff93f5e98b)
+        ;
+
+        
+    
+    
+            var circle_marker_c56ef7ef7d24416cb4a113bbd7afb251 = L.circleMarker(
+                [10.5216, 105.1259],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_aae348124797cf7153b1f850540b67e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1f8dd2eef4b4ac373aa96d6d7eec10b3 = $(`<div id="html_1f8dd2eef4b4ac373aa96d6d7eec10b3" style="width: 100.0%; height: 100.0%;">An Giang<br>Zone: 1<br>Infected Cases: 43.297<br>Deaths: 1.325<br>New Cases: 0</div>`)[0];
+                popup_aae348124797cf7153b1f850540b67e8.setContent(html_1f8dd2eef4b4ac373aa96d6d7eec10b3);
+            
+        
+
+        circle_marker_c56ef7ef7d24416cb4a113bbd7afb251.bindPopup(popup_aae348124797cf7153b1f850540b67e8)
+        ;
+
+        
+    
+    
+            var circle_marker_1dda3e88f2e6781ec985804a3ab509bd = L.circleMarker(
+                [10.449, 106.3424],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_8eab8abb1993ed6c28c9a7d2805db08a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8ccc20a2c3726ed9009cd2d84e06b982 = $(`<div id="html_8ccc20a2c3726ed9009cd2d84e06b982" style="width: 100.0%; height: 100.0%;">Tiền Giang<br>Zone: 1<br>Infected Cases: 39.902<br>Deaths: 1.29<br>New Cases: 0</div>`)[0];
+                popup_8eab8abb1993ed6c28c9a7d2805db08a.setContent(html_8ccc20a2c3726ed9009cd2d84e06b982);
+            
+        
+
+        circle_marker_1dda3e88f2e6781ec985804a3ab509bd.bindPopup(popup_8eab8abb1993ed6c28c9a7d2805db08a)
+        ;
+
+        
+    
+    
+            var circle_marker_ad6e9e219ab130a30a0edbd3930aa97c = L.circleMarker(
+                [9.6039, 105.9804],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_69e73dcd5c879f4013de4a34349134c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_854e5baa8a106e6a35e68a3d5df01ebe = $(`<div id="html_854e5baa8a106e6a35e68a3d5df01ebe" style="width: 100.0%; height: 100.0%;">Sóc Trăng<br>Zone: 0<br>Infected Cases: 34.457<br>Deaths: 634.0<br>New Cases: 0</div>`)[0];
+                popup_69e73dcd5c879f4013de4a34349134c1.setContent(html_854e5baa8a106e6a35e68a3d5df01ebe);
+            
+        
+
+        circle_marker_ad6e9e219ab130a30a0edbd3930aa97c.bindPopup(popup_69e73dcd5c879f4013de4a34349134c1)
+        ;
+
+        
+    
+    
+            var circle_marker_c4d346340d74667b1b5c29ef098f5bec = L.circleMarker(
+                [14.3502, 107.9841],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_b07c27950d5a72d7b1d8a3eacedc37d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_094d8e933782cbbae0b14862dcc4403e = $(`<div id="html_094d8e933782cbbae0b14862dcc4403e" style="width: 100.0%; height: 100.0%;">Kon Tum<br>Zone: 1<br>Infected Cases: 26.342<br>Deaths: 1.0<br>New Cases: 0</div>`)[0];
+                popup_b07c27950d5a72d7b1d8a3eacedc37d4.setContent(html_094d8e933782cbbae0b14862dcc4403e);
+            
+        
+
+        circle_marker_c4d346340d74667b1b5c29ef098f5bec.bindPopup(popup_b07c27950d5a72d7b1d8a3eacedc37d4)
+        ;
+
+        
+    
+    
+            var circle_marker_e6ee1097b61f6d02e35efd5bb206b16a = L.circleMarker(
+                [9.7846, 105.47],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_99c1b2b2715f7341df442fcab4600056 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3216fdff5cfea546d1305451238ef7e6 = $(`<div id="html_3216fdff5cfea546d1305451238ef7e6" style="width: 100.0%; height: 100.0%;">Hậu Giang<br>Zone: 1<br>Infected Cases: 17.9<br>Deaths: 231.0<br>New Cases: 0</div>`)[0];
+                popup_99c1b2b2715f7341df442fcab4600056.setContent(html_3216fdff5cfea546d1305451238ef7e6);
+            
+        
+
+        circle_marker_e6ee1097b61f6d02e35efd5bb206b16a.bindPopup(popup_99c1b2b2715f7341df442fcab4600056)
+        ;
+
+        
+    
+    
+            var circle_marker_a6954a6e20bc1f408490c28f791921dc = L.circleMarker(
+                [11.6739, 108.8622],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1943cd6adffb9b1724f6a42461571509);
+        
+    
+        var popup_13906c4419c0792382966915ffc4d3ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af5a5321d6d173ebdf1a22fa18441e0a = $(`<div id="html_af5a5321d6d173ebdf1a22fa18441e0a" style="width: 100.0%; height: 100.0%;">Ninh Thuận<br>Zone: 1<br>Infected Cases: 9.001<br>Deaths: 60.0<br>New Cases: 0</div>`)[0];
+                popup_13906c4419c0792382966915ffc4d3ba.setContent(html_af5a5321d6d173ebdf1a22fa18441e0a);
+            
+        
+
+        circle_marker_a6954a6e20bc1f408490c28f791921dc.bindPopup(popup_13906c4419c0792382966915ffc4d3ba)
+        ;
+
+        
+    
+</script>
+</html>
